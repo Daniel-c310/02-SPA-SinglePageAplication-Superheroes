@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-.main-conteiner {
+body{ /*Para que haya un poco de separacion al final de la pagina con las cartas (Pag. heroes)*/
+  padding-bottom: 1.5rem;
+}
+
+.main-conteiner {  /*Para que haya separacion un poco entre la barra co el contenido */
   margin-top: 1rem;
 }
 
