@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core'; //Usar sniper ng2-service para crear
 @Injectable()
 export class HeroesService { //Cambiar la clase a HeroesService
 
-  private heroes:any[] = [ //Aqui se crea la variable que va a contener todos los datos del servicio que se desea consumir, tambien es privado porque solo se accede de este servicio. Los datos estan en el descargable  de la carpeta 4 RECURSOS con el nombre de "data"
+  private heroes:Heroe[] = [ //Aqui se crea la variable que va a contener todos los datos del servicio que se desea consumir, tambien es privado porque solo se accede de este servicio. Los datos estan en el descargable  de la carpeta 4 RECURSOS con el nombre de "data"
     {
       nombre: "Aquaman",
       bio: "El poder más reconocido de Aquaman es la capacidad telepática para comunicarse con la vida marina, la cual puede convocar a grandes distancias.",
@@ -62,6 +62,17 @@ export class HeroesService { //Cambiar la clase a HeroesService
    }
 //CREAMOS ESTE METODO PARA PODER ACCEDER A LA INFORMACION DE CADA HEROE (No es privado porque esto va a consumirse fuera del servicio)
    getHeroes(){
-     return this.heroes; //el "this" hace referencia a los atributos de la calse, que es la data o datos de los heroes 
+     return this.heroes; //el "this" hace referencia a los atributos de la calse, que es la data o datos de los heroes
    }
+}
+
+
+// CREO UNA INTERFAZ DE HEROES PARA APROVECHAR/SACAR TODOS LOS ATRIVUTOS Y ESTA SE DEBE IMPORTAR
+//De ahi cambiar todas las variables a tipo "Heroe" asi mismo las variables de la pag Heroes/heroes.component eso se debe cambiar a variables que son de tipo "Heroe" e importar en esa misma pag
+export interface Heroe {
+  nombre:string;
+  bio:string;
+  img:string;
+  aparicion:string;
+  casa:string;
 }
