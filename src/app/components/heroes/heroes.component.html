@@ -3,16 +3,20 @@
 
 <div class="card-columns"> <!--  sacado de bootstrap "Cards" -->
 
-  <div class="card" *ngFor="let heroe of heroes">
+  <div class="card animated fadeIn fast" *ngFor="let heroe of heroes let i = index">
     <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
     <div class="card-body">
       <h5 class="card-title"> {{ heroe.nombre }} </h5>
       <p class="card-text"> {{ heroe.bio }} </p>
       <p class="card-text"><small class="text-muted"> {{ heroe.aparicion }} </small></p>
-      <button type="button" name="button" class="btn btn-outline-success my-2 my-sm-0 btn-block">Ver mas</button>
+
+      <!-- BOTON: Linea de abajo.utilizando el boton, se le asigna la funcion (click) al boton para cuando se presione, y junto con la funion verHeroe() creada en heroes.component  -->
+      <button (click)="verHeroe(i)" type="button" name="button" class="btn btn-outline-success my-2 my-sm-0 btn-block">Ver mas</button>
+
+      <!-- A: Linea de abajo. sistema de rutas usando <a> </a> en lugar de button con routerLink, se crea un index en el ngFor,, ver arriva  -->
+      <!-- <a class="btn btn-outline-success my-2 my-sm-0 btn-block" [routerLink]="['/heroe',i]">Ver mas Link...</a> -->
+
     </div>
   </div>
-
-
 
 </div>
