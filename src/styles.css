@@ -8,6 +8,10 @@ body{ /*Para que haya un poco de separacion al final de la pagina con las cartas
 }
 
 
+.img-logo{
+  width: 120px;
+}
+
 /* Animaciones */
 
 .animated {
