@@ -23,7 +23,6 @@ export class HeroesComponent implements OnInit {
 
 // BOTON: Linea de abajo. se crea una funcion que reciba el index del heroe
   verHeroe( idx:number ){
-
     this.router.navigate( ['/heroe',idx] );
     console.log(idx);
   }

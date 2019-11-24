@@ -64,6 +64,11 @@ export class HeroesService { //Cambiar la clase a HeroesService
    getHeroes(){
      return this.heroes; //el "this" hace referencia a los atributos de la calse, que es la data o datos de los heroes
    }
+
+//CREAMOS UN METODO QUE RECIBE UN INDEX/ID Y SOLO DEVUELVA UN HEROE CON TODOS SUS ATRIBUTOS
+   getHeroe( idx:string ){
+     return this.heroes[idx];
+   }
 }
 
 
