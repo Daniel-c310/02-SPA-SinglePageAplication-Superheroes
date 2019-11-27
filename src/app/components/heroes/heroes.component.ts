@@ -17,7 +17,7 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit() {
     this.heroes = this._heroesService.getHeroes(); //igualo el arreglo creado al arreglo que se eimporto con todo el arreglo de heroes, ver que llamo al metodo get que se creo en Servicios/heroes.service
-    console.log(this.heroes);
+    // console.log(this.heroes);
 
   }
 

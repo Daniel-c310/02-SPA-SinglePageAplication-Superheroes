@@ -69,6 +69,22 @@ export class HeroesService { //Cambiar la clase a HeroesService
    getHeroe( idx:string ){
      return this.heroes[idx];
    }
+
+//CREAMOS UN METODO QUE NOS SIRVA PARA BUSCAR UN HEROE O HEROES DEE LA CAJA DE TEXTO, ESTA FUNCION TAMBIEN NOS DEVUELVE ALGUNA COINCIDENCIA DE LOS HEROES QUE TENGAN ALGUNA PALABRA O LETRA INGRESADA EN EL IMPUT
+
+  buscarHeroes( termino:string ):Heroe[]{
+    let heroesArr:Heroe[] = [];
+    termino = termino.toLowerCase();
+
+    for( let heroe of this.heroes ){
+        let nombre = heroe.nombre.toLowerCase();
+
+        if ( nombre.indexOf( termino ) >= 0 ){
+          heroesArr.push( heroe );
+        }
+    }
+    return heroesArr;
+  }
 }
 
 
