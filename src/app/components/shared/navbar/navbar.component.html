@@ -33,9 +33,9 @@
         </div>
       </li>
     </ul>
-    <div class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search" #buscarTexto (keyup.enter)="buscarHeroe(buscarTexto.value)">
-      <button class="btn btn-outline-success my-2 my-sm-0" (click)="buscarHeroe(buscarTexto.value)" >Buscar</button>
+    <div class="form-inline my-2 my-lg-0">      <!-- ESTE DEBE SER UN DIV, PORQUE SI ES UN FORM SE ACTUALIZA LA PAGINA CADA VEZ UE BUSCAMOS ALGO -->
+      <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search" #buscarTexto (keyup.enter)="verHeroe(buscarTexto.value)">
+      <button class="btn btn-outline-success my-2 my-sm-0" (click)="verHeroe(buscarTexto.value)" >Buscar</button>
     </div>
   </div>
 </nav>

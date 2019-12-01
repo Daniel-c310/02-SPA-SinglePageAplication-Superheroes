@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroesService } from '../../../servicios/heroes.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,16 +7,21 @@ import { HeroesService } from '../../../servicios/heroes.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor( private heroesService:HeroesService ) {}
+  constructor( private router:Router ) {}
 
   ngOnInit() {
+
   }
+//PARA BUSCAR UN HEROE, ESTO ES PARA COMPROBAR SI FUNIONA (DE PREFERENCIA NO QUITAR EL COMENTADO)
+  // buscarHeroe( termino:string ){
+  //   let busqueda = this.heroesService.buscarHeroes(termino);
+  //   console.log( busqueda );
+  //   return busqueda;
+  // }
 
-  buscarHeroe( termino:string ){
-    let busqueda = this.heroesService.buscarHeroes(termino);
-    console.log( busqueda );
+  verHeroe(parametro:string){
+    this.router.navigate(['busqueda',parametro]);
+    console.log(['busqueda',parametro]);
   }
-
-
 
 }

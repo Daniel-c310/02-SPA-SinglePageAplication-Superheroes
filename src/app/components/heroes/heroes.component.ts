@@ -16,7 +16,7 @@ export class HeroesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.heroes = this._heroesService.getHeroes(); //igualo el arreglo creado al arreglo que se eimporto con todo el arreglo de heroes, ver que llamo al metodo get que se creo en Servicios/heroes.service
+    this.heroes = this._heroesService.getHeroes(); //LA VARIABLE "heroes" me sirve para mostrar los atributos de cada heroe, como el nombre, fecha etc, en la pagina html (no es la busueda de uno, sino lo que se muestra todo) que se muestra igualo el arreglo creado al arreglo que se eimporto con todo el arreglo de heroes, ver que llamo al metodo get que se creo en Servicios/heroes.service
     // console.log(this.heroes);
 
   }
